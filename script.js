@@ -1,5 +1,6 @@
 $('#add').click(function() {
     var taskText = $('input:text').val();
+    console.log(taskText);
     if (taskText != "") {
         $('input:text').val("");
         addTask(taskText);
