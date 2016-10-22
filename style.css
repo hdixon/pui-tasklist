@@ -18,7 +18,7 @@ p {
 
 task {
     margin: 15px;
-    padding: 1em;
+    padding: 2.25em;
     background: #FFFFFF;
     box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.25);
     display: block;
@@ -54,11 +54,17 @@ task {
 }
 
 #done {
-    font-family: Helvetica-Bold;
     color: #4A90E2;
-    display: block;
-    margin-right: 5px;
-    margin-left: auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+#cancel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.25;
 }
 
 #timeDue {
@@ -67,7 +73,6 @@ task {
     display: inline-block;
     text-align: center;
     line-height: 0.95;
-    margin-left: 15px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -85,7 +90,8 @@ task {
 .taskText {
     font-family: Helvetica;
     color: #4A4A4A;
-    display: inline-block;
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     left: 100px;
 }
