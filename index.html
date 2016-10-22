@@ -22,7 +22,21 @@
 
 <body>
     <div class="container">
-        <center><h4>Upcoming Tasks</h4></center>
+        <div id="modal">
+            <div id="modal-content">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label for="exampleInputName2">Edit task</label>
+                        <input type="text" class="form-control" id="exampleInputName2" placeholder="IDK">
+                    </div>
+                    <button id="cancelEdit" class="btn btn-primary">Cancel</button>
+                    <button id="confirmEdit" class="btn btn-primary">Confirm</button>
+                </form>
+            </div>
+        </div>
+
+        <center>
+            <h4>Upcoming Tasks</h4></center>
         <div id="tasks">
             <task>
                 <div id="timeDue">

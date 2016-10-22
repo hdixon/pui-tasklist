@@ -1,5 +1,5 @@
 function addGlobal() {
-    var taskText = $('input:text').val();
+    var taskText = $('#taskInput').val();
     console.log(taskText);
     if (taskText != "") {
         $('input:text').val("");
@@ -18,6 +18,17 @@ function cancel(elem) {
     div.css("background-color", "#F83F56");
     div.fadeOut(200, "swing");
 }
+
+function edit(elem) {
+    var originalElem = $(elem).html();
+
+}
+
+
+// to edit tasks
+$('.taskText').click(function() {
+    edit(this);
+});
 
 $('#add').click(function() {
     addGlobal();
@@ -51,11 +62,11 @@ function addTask(txt) {
 
 
     $("task #done").click(function() {
-      complete(this);
+        complete(this);
     });
 
     $("task #cancel").click(function() {
-      cancel(this);
+        cancel(this);
     });
 
 }
