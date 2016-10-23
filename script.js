@@ -1,6 +1,5 @@
 function addGlobal() {
     var taskText = $('#taskInput').val();
-    console.log(taskText);
     if (taskText != "") {
         $('input:text').val("");
         addTask(taskText);
@@ -28,19 +27,19 @@ function edit(elem) {
     $('#editInput').val(taskText);
     modal.css("display", "block");
 
-    confirm.click(function () {
-      var newTaskText = $('#editInput').val();
-      $(elem).html(newTaskText);
-      modal.css("display", "none");
+
+    confirm.click(function() {
+        var newTaskText = $('#editInput').val();
+        var newElem = "<span class='taskText'>" + newTaskText + "</span>";
+        console.log(elem);
+        $(elem).replaceWith(newElem);
+        console.log(elem);
+        modal.css("display", "none");
     });
 
-    cancel.click(function () {
-      modal.css("display", "none");
+    cancel.click(function() {
+        modal.css("display", "none");
     })
-
-
-
-
 
 }
 
