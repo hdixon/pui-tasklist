@@ -20,10 +20,29 @@ function cancel(elem) {
 }
 
 function edit(elem) {
-    var originalElem = $(elem).html();
+    var modal = $('#modal');
+    var cancel = $('#cancelEdit');
+    var confirm = $('#confirmEdit');
+    var taskText = $(elem).html();
+
+    $('#editInput').val(taskText);
+    modal.css("display", "block");
+
+    confirm.click(function () {
+      var newTaskText = $('#editInput').val();
+      $(elem).html(newTaskText);
+      modal.css("display", "none");
+    });
+
+    cancel.click(function () {
+      modal.css("display", "none");
+    })
+
+
+
+
 
 }
-
 
 // to edit tasks
 $('.taskText').click(function() {
